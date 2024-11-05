@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "Receipt covert to CSV",
+    "version": "1.0",
+    "description": "Amazonの領収書のIDをCSVに変換する拡張機能",
+    "permissions": ["activeTab", "scripting", "downloads"],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "48": "icon48.png"
+      }
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://www.amazon.co.jp/*"],
+        "js": ["content.js"]
+      }
+    ]
+  }  
