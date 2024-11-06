@@ -8,7 +8,7 @@ document.getElementById("export").addEventListener("click", async () => {
 
             document.querySelectorAll(".order").forEach(order => {
                 // <bdi dir="ltr"> または <span dir="ltr"> のどちらかの要素を取得
-                const orderIdElement = order.querySelector("bdi[dir='ltr'], span[dir='ltr']");
+                const orderIdElement = order.querySelector("bdi[dir='ltr'], span[class='a-color-secondary'][dir='ltr']");
                 const orderId = orderIdElement?.innerText.trim() || "N/A";
                 data.push([orderId]);
             });
