@@ -7,7 +7,7 @@ document.getElementById("export").addEventListener("click", async () => {
             const data = [["Order ID"]]; // CSVのヘッダーとして"Order ID"を設定
 
             document.querySelectorAll(".order").forEach(order => {
-                const orderId = order.querySelector("bdi[dir='ltr']")?.innerText.trim() || "N/A";
+                const orderId = order.querySelector("bdi[dir='ltr'],span[dir='ltr']")?.innerText.trim() || "N/A";
                 data.push([orderId]);
             });
 
